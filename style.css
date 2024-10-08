@@ -406,55 +406,34 @@ button:hover {
 }
 @media (max-width: 768px) {
     .container-3 {
-        flex-direction: column; /* Empilha os elementos em dispositivos menores */
-        padding: 10px; /* Reduz o padding para telas pequenas */
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+        margin-top: 20px;
     }
 
-    .content-left {
-        margin-left: 0; /* Remove a margem lateral em telas pequenas */
-        text-align: center; /* Centraliza o conteúdo */
-    }
-
-    .content-left h1 {
-        font-size: 28px; /* Ajuste de tamanho da fonte */
-    }
-
-    .content-left h2 {
-        font-size: 18px;
-        width: 100%; /* Ocupar a largura total da tela */
+    .content-left, .content-right {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
     }
 
     .content-right {
-        margin-right: 0;
-        width: 100%; /* Ajusta a largura da seção de conteúdo */
-        align-items: center; /* Centraliza o conteúdo */
+        margin-top: 20px;
     }
 
     .content-right input {
-        width: 50%; /* Deixa o input responsivo em dispositivos menores */
+        width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
     }
 
     .button-2 {
-        width: 100%; /* O botão ocupa a largura total em dispositivos menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .content-left h1 {
-        font-size: 24px; /* Reduz o tamanho da fonte ainda mais em telas menores */
-    }
-
-    .content-left h2 {
-        font-size: 16px;
-    }
-
-    .content-right input {
-        font-size: 14px; /* Ajuste para melhorar a legibilidade */
-        width: 50%;
-    }
-
-    .button-2 {
-        width: 100%;
-        padding: 8px 16px; /* Ajuste de padding para telas muito pequenas */
+        width: 80%;
+        max-width: 300px;
+        padding: 10px;
+        margin: 0 auto;
     }
 }
