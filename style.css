@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+
+/*CABEÇALHO*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.logo img {
+    width: 200px;
+    margin-left: 70px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    margin-right: 70px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/*RESPONSIVIDADE CABEÇALHO */
+@media (max-width: 768px) {
+    header {
+        margin-bottom: 20px;
+        align-items: center;
+        gap: 30px;
+    }
+    .logo img{
+        width: 75px;
+        margin-left: 0px;
+    }
+    .nav-links {
+        gap: 20px; 
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        margin-bottom: 20px;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .logo img {
+        width: 75px;
+        margin-left: 0px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px; 
+    }
+}
+
+
+
+/*PRIMEIRO CONTAINER*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: 100vh;
+}
+
+.left-side {
+    max-width: 50%;
+    width: 40%;
+    margin-left: 70px;
+    text-align: start;
+}
+
+.title h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: hsl(243, 87%, 12%);
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: hsl(238, 22%, 44%);
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    height: 50px;
+    width: 300px;
+    max-width: 300px;
+    border: 1px solid hsl(238, 22%, 44%);
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    width: 300px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.right-side {
+    max-width: 45%;
+    text-align: left;
+    margin-right: 70px;
+}
+
+.right-side img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*RESPONSIVIDA PRIMEIRO CONTAINER */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-side, 
+    .right-side {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .right-side {
+        order: -1; 
+    }
+
+    .right-side img {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .title h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"] {
+        height: 45px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .right-side img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    input[type="text"] {
+        height: 40px;
+    }
+
+    button {
+        max-width: 200px;
+    }
+
+    .right-side img {
+        width: 100%;
+    }
+}
+
+/*CONTAINER-2 */
+
+.container-2 {
+    display: flex;
+    background-image: url('img/bg-curve-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: 80vh;
+}
+
+.content-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-left: 70px;
+}
+
+.content-2 h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: hsl(243, 87%, 12%);
+}
+
+.content-2 h2{
+    font-size: 22px;
+    width: 45%;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: hsl(238, 22%, 44%);
+}
+
+.image {
+    width: 400px;
+    height: 400px; 
+    margin-left: 20px;
+}
+
+/* RESPONSIVIDADE ITEM 2 */
+
+@media (max-width: 768px) {
+    .container-2 {
+        flex-direction: column;
+        background-image: url('img/bg-curve-mobile.svg');
+        padding: 20px;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .content-2 {
+        margin-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .content-2 h1 {
+        font-size: 32px;
+    }
+
+    .content-2 h2 {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    .container-2 {
+        padding: 10px;
+    }
+
+    .content-2 h1 {
+        font-size: 25px;
+    }
+
+    .content-2 h2 {
+        font-size: 16px;
+    }
+
+    .image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/*CONTAINER-3 */
+
+.container-3 {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos com espaço entre eles */
+    align-items: flex-start; /* Alinha os itens ao topo para garantir que fiquem alinhados horizontalmente */
+    padding: 20px;
+    height: 30vh;
+    align-items: center;
+    background-color: hsl(239, 54%, 68%);
+    flex-wrap: wrap; /* Permite que o layout seja quebrado em dispositivos menores */
+}
+
+.content-left {
+    flex: 1; /* Deixa a coluna flexível */
+    margin-right: 40px; /* Adiciona espaço entre o content-left e content-right */
+    margin-left: 70px;
+}
+
+.content-left h1 {
+    font-size: 36px;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+}
+
+.content-left h2 {
+    font-size: 22px;
+    color: hsl(0, 0%, 100%);
+    width: 100%; /* O texto ocupa a largura disponível */
+}
+
+.content-right {
+    flex: 1; /* Deixa a coluna flexível */
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px; /* Espaçamento horizontal entre os dois blocos */
+    margin-right: 70px;
+}
+
+.content-right input {
+    padding: 10px 400px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-2 {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-2:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    .container-3 {
+        flex-direction: column; /* Empilha os elementos em dispositivos menores */
+        padding: 10px; /* Reduz o padding para telas pequenas */
+    }
+
+    .content-left {
+        margin-left: 0; /* Remove a margem lateral em telas pequenas */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .content-left h1 {
+        font-size: 28px; /* Ajuste de tamanho da fonte */
+    }
+
+    .content-left h2 {
+        font-size: 18px;
+        width: 100%; /* Ocupar a largura total da tela */
+    }
+
+    .content-right {
+        margin-right: 0;
+        width: 100%; /* Ajusta a largura da seção de conteúdo */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .content-right input {
+        width: 50%; /* Deixa o input responsivo em dispositivos menores */
+    }
+
+    .button-2 {
+        width: 100%; /* O botão ocupa a largura total em dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .content-left h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte ainda mais em telas menores */
+    }
+
+    .content-left h2 {
+        font-size: 16px;
+    }
+
+    .content-right input {
+        font-size: 14px; /* Ajuste para melhorar a legibilidade */
+        width: 50%;
+    }
+
+    .button-2 {
+        width: 100%;
+        padding: 8px 16px; /* Ajuste de padding para telas muito pequenas */
+    }
+}
